@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_claro"
+    android:padding="10dp"
+    tools:context="com.empresa.FitEquantions.MainActivity">
+
+    <TextView
+        android:id="@+id/textMiffli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/noto_serif_bold"
+        android:gravity="center"
+        android:text="Mifflin"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="260dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="45dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177">
+
+
+        <RadioButton
+            android:id="@+id/radioHomem"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/custome_radiobutton"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Homem"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:theme="@style/RadioButonn" />
+
+        <RadioButton
+            android:id="@+id/radioMulher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/custome_radiobutton"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Mulher"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:theme="@style/RadioButonn" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="396dp"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314"
+        tools:layout_editor_absoluteX="7dp">
+
+        <EditText
+            android:id="@+id/editIdade"
+            style="@style/EditTextCustomStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Idade"
+            android:inputType="number|numberSigned"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Peso"
+            android:inputType="number|numberDecimal"
+            android:textColor="#FBFBFB"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/editAltura"
+            style="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Altura"
+            android:inputType="number|numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMifflin"
+        android:layout_width="195dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="121dp"
+        android:background="@drawable/button_calcular"
+        android:fontFamily="@font/quicksand_medium"
+        android:onClick="calcular"
+        android:text="Calcular"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="320dp"
+        android:layout_height="243dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="2dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961">
+
+        <TextView
+            android:id="@+id/textResultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
